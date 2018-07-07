@@ -56,20 +56,20 @@ var data = {
     }
   ]
 }
- function createStat(param) {
-	var stat = document.querySelector("#templateMain")
-	var main = document.querySelector(".main")
-	var newStat = stat.content.cloneNode(true);
-	newStat.querySelector('.template__link').textContent = param.name;
-	newStat.querySelector('.template__description').textContent = param.description;
-	newStat.querySelector('.category').textContent = param.category;
-	newStat.querySelector('.fixed').textContent = param.options.fixed;
-	newStat.querySelector('.budget').textContent = param.options.budget;
-	newStat.querySelector('.delivery').textContent = param.options.delivery;
-	newStat.querySelector('.posted').textContent = param.options.posted;
-	newStat.querySelector('.ends').textContent = param.options.ends;
-	newStat.querySelector('.client__name').textContent = param.client.country;
-	newStat.querySelector('.stars').textContent = param.client.rating;
+function createStat(param) {
+  var stat = document.querySelector("#templateMain")
+  var main = document.querySelector(".main")
+  var newStat = stat.content.cloneNode(true);
+  newStat.querySelector('.template__link').textContent = param.name;
+  newStat.querySelector('.template__description').textContent = param.description;
+  newStat.querySelector('.category').textContent = param.category;
+  newStat.querySelector('.fixed').textContent = param.options.fixed;
+  newStat.querySelector('.budget').textContent = param.options.budget;
+  newStat.querySelector('.delivery').textContent = param.options.delivery;
+  newStat.querySelector('.posted').textContent = param.options.posted;
+  newStat.querySelector('.ends').textContent = param.options.ends;
+  newStat.querySelector('.client__name').textContent = param.client.country;
+  newStat.querySelector('.stars').textContent = param.client.rating;
   main.appendChild(newStat)
   console.log(param)
 }
