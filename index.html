@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Пример веб-страницы</title>
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="chosen.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="body-wrapper">
+    <aside class="categories">
+      <div class="categories__items">
+        <p class="title">Choose Category</p>
+        <select class="select">
+          <option>Best Match</option>
+          <option>Пункт 2</option>
+        </select>
+      </div>
+
+      <div class="categories__items">
+        <p class="title">Chose Subcategory</p>
+        <p>
+          <label class="container">All Subcategories
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </p>
+        <p>
+          <label class="container">Data Entry(1 306)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </p>
+        <p>
+          <label class="container">Peronal Assistant(1 907)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </p>
+        <p>
+          <label class="container">Web Research(972)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </p>
+        <p>
+          <label class="container">Email Response Handling(80)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </p>
+        <p>
+          <label class="container">Transcription
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </p>
+        <p>
+          <label class="container">Other-Administrative support
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </p>
+      </div>
+
+      <div class="categories__items">
+        <p class="title">Client Rating</p>
+        <label class="label">Any stars
+          <input type="radio" checked="checked" name="radio">
+          <span class="check"></span>
+        </label>
+        <label class="label">5 stars (930)
+          <input type="radio" name="radio">
+          <span class="check"></span>
+        </label>
+        <label class="label">4.5 stars and Up(2 591)
+          <input type="radio" name="radio">
+          <span class="check"></span>
+        </label>
+        <label class="label">4 stars and Up(1 546)
+          <input type="radio" name="radio">
+          <span class="check"></span>
+        </label>
+        <label class="container">Include unrated freelancers(1 784)
+          <input type="checkbox" name="radio">
+          <span class="new-checkmark new-color"></span>
+        </label>
+      </div>
+
+      <div class="categories__items">
+        <p class="title">Budget</p>
+        <select class="select">
+          <option>Any budget</option>
+          <option>Пункт 2</option>
+        </select>
+      </div>
+
+      <div class="categories__items">
+        <p class="title">Delivery</p>
+        <select class="select">
+          <option>Any</option>
+          <option>Пункт 2</option>
+        </select>
+      </div>
+
+      <div class="categories__items">
+        <p class="title">Location</p>
+        <select class="select">
+          <option>Any Location</option>
+          <option>Пункт 2</option>
+        </select>
+      </div>
+
+    </aside>
+    <section class="section">
+      <div class="main">
+        <template id="templateMain">
+          <div class="template__item">
+            <a href="#" class="template__link">SEO Review and Reccomendations </a>
+            <div class="template__options">
+              <span class="options-gray">Fixed:</span>
+              <span class="fixed"></span><span> | </span> 
+              <span class="options-gray">Budget:</span>
+              <span class="budget"></span><span> | </span> 
+              <span class="options-gray">Delivery:</span>
+              <span class="delivery"></span><span> | </span> 
+              <span class="options-gray">Posted:</span>
+              <span class="posted"></span><span> | </span> 
+              <span class="options-gray">Ends:</span>
+              <span class="ends"></span><span> | </span> 
+              <a href="#"> 0
+                <span>Proposals</span>
+              </a>
+            </div>
+            <div class="template__description">
+
+            </div>
+            <div class="template__bottom">
+                <div class="skills">
+                    <span class="options-gray">Category:</span>
+                    <span class="category">Engine</span><span> | </span> 
+                    <span class="options-gray">Skills:</span>
+                    <span class="skill__name"></span>
+                    <a href="#">18 more</a>
+                  </div>
+                  <div class="client">
+                    <span class="options-gray">Client:</span>
+                    <span class="client__name"></span>
+                    <span class="stars"></span>
+                  </div>
+            </div>
+           
+          </div>
+        </template>
+
+      </div>
+    </section>
+  </div>
+  <script src="scrip.js"></script>
+  <script src="chosen.jquery.min.js"></script>
+  <script>
+    $(".select").chosen({
+      disable_search_threshold: 10
+    });
+  </script>
+</body>
+
+</html>
