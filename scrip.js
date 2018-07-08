@@ -70,14 +70,17 @@ function createStat(param) {
   newStat.querySelector('.ends').textContent = param.options.ends;
   newStat.querySelector('.client__name').textContent = param.client.country;
   newStat.querySelector('.stars').textContent = param.client.rating;
+  param.skills.forEach(function(e){
+    newStat.querySelector('.skill__name').textContent = e.name
+  })
+  
   main.appendChild(newStat)
-  console.log(param)
 }
 function some() {
   for (var key in data) {
-    for (var i in data[key]) {
-      createStat(data[key][i])
-    }
+    data[key].forEach(function(e){
+      createStat(e)
+   })
   }
 }
 some()
