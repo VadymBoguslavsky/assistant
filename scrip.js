@@ -56,6 +56,8 @@ var data = {
     }
   ]
 }
+
+
 function createStat(param) {
   var stat = document.querySelector("#templateMain")
   var main = document.querySelector(".main")
@@ -70,8 +72,12 @@ function createStat(param) {
   newStat.querySelector('.ends').textContent = param.options.ends;
   newStat.querySelector('.client__name').textContent = param.client.country;
   newStat.querySelector('.stars').textContent = param.client.rating;
-  param.skills.forEach(function(e){
-    newStat.querySelector('.skill__name').textContent = e.name
+  var skills = newStat.querySelector('.skill__list')
+  param.skills.forEach(function (skill) {
+     var span = document.createElement('span')
+    span.innerHTML = skill.name
+    span.classList.add('skill__name')
+    skills.appendChild(span)
   })
   
   main.appendChild(newStat)
@@ -84,3 +90,39 @@ function some() {
   }
 }
 some()
+// function createStat(param) {
+//   var stat = document.querySelector("#templateMain")
+//   var main = document.querySelector(".main")
+//   var newStat = stat.cloneNode(true);
+//   newStat.querySelector('.template__link').textContent = param.name;
+//   newStat.querySelector('.template__description').textContent = param.description;
+//   newStat.querySelector('.category').textContent = param.category;
+//   newStat.querySelector('.fixed').textContent = param.options.fixed;
+//   newStat.querySelector('.budget').textContent = param.options.budget;
+//   newStat.querySelector('.delivery').textContent = param.options.delivery;
+//   newStat.querySelector('.posted').textContent = param.options.posted;
+//   newStat.querySelector('.ends').textContent = param.options.ends;
+//   newStat.querySelector('.client__name').textContent = param.client.country;
+//   newStat.querySelector('.stars').textContent = param.client.rating;
+//   var skills = newStat.querySelector('.skill__list')
+//   param.skills.forEach(function (skill) {
+//      var span = document.createElement('span')
+//     span.innerHTML = skill.name
+//     span.classList.add('skill__name')
+//     skills.appendChild(span)
+//   })
+//   main.appendChild(newStat)
+// }
+
+// function checkObject(obj) {
+//   for (var k in obj) {
+//     var prop = obj[k];
+   
+//       prop.forEach(e => {
+//         createStat(e)
+//       });
+
+//   }
+// }
+// checkObject(data);
+// var ff= document.querySelector('.main')

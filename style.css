@@ -133,8 +133,11 @@
   background-color: #f6f6f5;
   padding: 15px;
   border-radius: 5px;
+  margin-left: 10px;
 }
-
+.skill__list{
+  display: inline-block;
+}
 .template__bottom {
   font-size: 14px;
   margin: 15px 15px;
